@@ -1,13 +1,11 @@
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
   font-weight: 400;
   line-height: 1.5;
@@ -30,7 +28,8 @@ a {
   color: #333;
 }
 
-/* ----- HEADER ------ */
+/* HEADER */
+
 header {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -59,4 +58,29 @@ nav ul {
 nav ul li {
   font-weight: 400;
   margin: 0 5%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer__section {
+  max-width: 1024px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer__section__about {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer__section__about__logo {
+  margin-right: 2rem;
 }
