@@ -16,7 +16,7 @@
   \*****************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  font-family: 'Roboto', sans-serif;\n  font-size: 62.5%;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #333;\n}\n\nbody {\n  font-size: 1.6rem;\n  overflow-y: auto;\n  scrollbar-width: thin;\n  scrollbar-color: transparent transparent;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  text-decoration: none;\n  color: #333;\n}\n\n/* HEADER */\n\nheader {\n  background-color: #fff;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n\nnav {\n  max-width: 1024px;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 2rem 1rem;\n}\n\nnav ul {\n  width: 100%;\n  margin-left: 2vw;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 1rem;\n}\n\nnav ul li {\n  font-weight: 400;\n  margin: 0 5%;\n}\n\n/* FOOTER */\n\nfooter {\n  background-color: #fff;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n\n.footer__section {\n  max-width: 1024px;\n  margin: auto;\n  padding: 20px;\n}\n\n.footer__section__about {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.footer__section__about__logo {\n  margin-right: 2rem;\n}\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://javascriptcapstone/./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  font-family: 'Roboto', sans-serif;\n  font-size: 62.5%;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #333;\n}\n\nbody {\n  font-size: 1.6rem;\n  overflow-y: auto;\n  scrollbar-width: thin;\n  scrollbar-color: transparent transparent;\n}\n\nul {\n  list-style: none;\n}\n\na {\n  text-decoration: none;\n  color: #333;\n}\n\n/* HEADER */\n\nheader {\n  background-color: #fff;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n\nnav {\n  max-width: 1024px;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 2rem 1rem;\n}\n\nnav ul {\n  width: 100%;\n  margin-left: 2vw;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 1rem;\n}\n\nnav ul li {\n  font-weight: 400;\n  margin: 0 5%;\n}\n\n/* MAIN PART */\nmain {\n  background: linear-gradient(-45deg, #081f37, #5fc9f3, #2e79ba, #1e549f);\n  background-size: 400% 400%;\n  animation: gradient 15s ease infinite;\n}\n\n@keyframes gradient {\n  0% {\n    background-position: 0 50%;\n  }\n\n  50% {\n    background-position: 100% 50%;\n  }\n\n  100% {\n    background-position: 0 50%;\n  }\n}\n\n.wrapper {\n  max-width: 1440px;\n  margin: auto;\n  padding: 5rem 0;\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(320px, 350px));\n  gap: 2.5rem;\n  justify-content: center;\n  place-items: center;\n}\n\n.wrapper__card {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 90vw;\n  max-width: 350px;\n  padding: 20px;\n  border: 1px solid #ccc;\n  border-radius: 10px;\n  background-color: #fff;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n\n.wrapper__card:hover {\n  transform: scale(1.01);\n  transition: all 0.1s ease-out;\n}\n\n.wrapper__card__img {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 10px;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  cursor: pointer;\n}\n\n.wrapper__card__details {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  width: 100%;\n  margin-top: 1rem;\n}\n\n.wrapper__card__details__title {\n  font-size: 1.6rem;\n}\n\n.wrapper__card__details__likes {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n\n.wrapper__card__details__likes-btn {\n  font-size: 2rem;\n  background-color: #fff;\n  border-radius: 10px;\n  border-style: none;\n  color: white;\n  -webkit-text-stroke: 1px darkgray;\n  cursor: pointer;\n  transition: all 0.2s ease-in-out;\n}\n\n.wrapper__card__details__likes-btn:hover {\n  transform: scale(1.1);\n  color: red;\n  -webkit-text-stroke: unset;\n}\n\n.likes-btn--active {\n  font-size: 2rem;\n  background-color: #fff;\n  border-radius: 10px;\n  border-style: none;\n  color: red;\n  -webkit-text-stroke: unset;\n  cursor: pointer;\n  transition: all 0.2s ease-in-out;\n}\n\n.likes-btn--active:hover {\n  transform: scale(1.1);\n}\n\n.wrapper__card__comments-btn,\n.card__btn {\n  width: 100%;\n  height: 40px;\n  margin-top: 1rem;\n  font-weight: 600;\n  color: white;\n  background-color: dodgerblue;\n  border-style: none;\n  border-radius: 10px;\n  cursor: pointer;\n}\n\n.card-btn:hover {\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n  transform: scale(1.01);\n}\n\n.card-btn:active {\n  background-color: royalblue;\n}\n\n/* FOOTER */\n\nfooter {\n  background-color: #fff;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);\n}\n\n.footer__section {\n  max-width: 1024px;\n  margin: auto;\n  padding: 20px;\n}\n\n.footer__section__about {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.footer__section__about__logo {\n  margin-right: 2rem;\n}\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://javascriptcapstone/./src/css/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,17 +116,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _imgs_icon_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imgs/icon.png */ \"./src/imgs/icon.png\");\n\n\n\n\n//# sourceURL=webpack://javascriptcapstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _modules_DOM_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/DOM.js */ \"./src/modules/DOM.js\");\n\n\n\nconst domObj = new _modules_DOM_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\ndomObj.displayAllCountries();\n\n\n//# sourceURL=webpack://javascriptcapstone/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/imgs/icon.png":
-/*!***************************!*\
-  !*** ./src/imgs/icon.png ***!
-  \***************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ "./src/modules/DOM.js":
+/*!****************************!*\
+  !*** ./src/modules/DOM.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"c53da638b228a3ff0625.png\";\n\n//# sourceURL=webpack://javascriptcapstone/./src/imgs/icon.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _rest_countries_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rest_countries.js */ \"./src/modules/rest_countries.js\");\n\n\nclass DOM {\n  constructor() {\n    this.countries = new _rest_countries_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    this.container = document.querySelector('.wrapper');\n  }\n\n  createHtmlContent = async (country) => {\n    const countryInfo = this.countries.getCountryShortInfo(country);\n    const html = `\n    <article class=\"wrapper__card\">\n      <img class=\"wrapper__card__img\" src=\"${\n        (await countryInfo).flagURl\n      }\" alt=\"${(await countryInfo).name}\" />\n      <div class=\"wrapper__card__details\">\n        <h3 class=\"wrapper__card__details__title\">${\n          (await countryInfo).name\n        }</h3>\n        <div class=\"wrapper__card__details__likes\">\n          <button class=\"wrapper__card__details__likes-btn\"><i class=\"bi bi-heart-fill\"></i></button>\n          <p></p>\n        </div>\n      </div>\n      <button class=\"wrapper__card__comments-btn card__btn\">Comments</button>\n    </article>\n    `;\n    return html;\n  };\n\n  displayAllCountries = async () => {\n    this.container.innerHTML = '';\n    const contries = this.countries.getSelectedCountries();\n    contries.forEach(async (country) => {\n      const html = await this.createHtmlContent(country);\n      this.container.insertAdjacentHTML('beforeend', html);\n    });\n  };\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DOM);\n\n\n//# sourceURL=webpack://javascriptcapstone/./src/modules/DOM.js?");
+
+/***/ }),
+
+/***/ "./src/modules/rest_countries.js":
+/*!***************************************!*\
+  !*** ./src/modules/rest_countries.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Countries {\n  constructor() {\n    this.selectedCountries = [\n      'turkey',\n      'russia',\n      'canada',\n      'iran',\n      'egypt',\n      'colombia',\n      'afghanistan',\n      'japan',\n      'china',\n      'india',\n      'iraq',\n      'nigeria',\n      'france',\n      'italy',\n      'spain',\n      'thailand',\n      'australia',\n      'brazil',\n      'argentina',\n      'pakistan',\n      'mexico',\n      'venezuela',\n      'UK',\n      'USA',\n    ];\n  }\n\n  getCountryFullData = async (country) => {\n    const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);\n    const [data] = await res.json();\n    return data;\n  };\n\n  getCountryShortInfo = async (country) => {\n    const data = await this.getCountryFullData(country);\n    return {\n      name: data.name.common,\n      flagURl: data.flags.png,\n      population: data.population,\n      continent: data.region,\n      capital: data.capital[0] || 'Unknown',\n      area: data.area,\n    };\n  };\n\n  getSelectedCountries = () => this.selectedCountries;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Countries);\n\n\n//# sourceURL=webpack://javascriptcapstone/./src/modules/rest_countries.js?");
 
 /***/ })
 
@@ -181,18 +191,6 @@ eval("module.exports = __webpack_require__.p + \"c53da638b228a3ff0625.png\";\n\n
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -207,29 +205,6 @@ eval("module.exports = __webpack_require__.p + \"c53da638b228a3ff0625.png\";\n\n
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
