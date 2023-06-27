@@ -30,7 +30,7 @@ a {
   color: #333;
 }
 
-/* ----- HEADER ------*/
+/* ----- HEADER ------ */
 header {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -60,4 +60,3 @@ nav ul li {
   font-weight: 400;
   margin: 0 5%;
 }
-
