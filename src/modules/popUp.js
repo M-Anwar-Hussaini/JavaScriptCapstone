@@ -5,9 +5,12 @@ class PopUp {
   constructor() {
     this.countries = new Countries();
     this.popupContainer = document.querySelector('main');
-    this.closeBtn = document.querySelector('.pop-up__close-btn');
-    this.commentsBtn = document.querySelector('.pop-up__comments-btn');
   }
+
+  countComments = async (country) => {
+    const comments = await new Involvement().getComment(country);
+    return comments.length;
+  };
 
   createPopUp = async (country) => {
     const countryInfo = this.countries.getCountryShortInfo(country);
@@ -20,7 +23,7 @@ class PopUp {
     const popUpImg = document.createElement('img');
     popUpImg.classList.add('pop-up__container__img');
     popUpImg.setAttribute('src', (await countryInfo).flagURl);
-    popUpImg.setAttribute('alt', country.name);
+    popUpImg.setAttribute('alt', (await countryInfo).name);
     popUpContent.appendChild(popUpImg);
 
     const popUpCloseBtn = document.createElement('div');
@@ -60,7 +63,8 @@ class PopUp {
 
     const popUpContainerLogTitle = document.createElement('h3');
     popUpContainerLogTitle.classList.add('pop-up__container__log__title');
-    popUpContainerLogTitle.textContent = 'Comments';
+    const commentsCount = await this.countComments(country);
+    popUpContainerLogTitle.textContent = `Comments (${commentsCount})`;
     popUpContainerLog.appendChild(popUpContainerLogTitle);
 
     const popUpContainerLogEntries = document.createElement('ul');
@@ -91,13 +95,13 @@ class PopUp {
     popUpContainerFormTitle.textContent = 'Add a comment';
     popUpContainerForm.appendChild(popUpContainerFormTitle);
 
-    const popUpContainerFormForm = document.createElement('form');
-    popUpContainerFormForm.setAttribute('action', '');
+    const popUpContainerFormElement = document.createElement('form');
+    popUpContainerFormElement.setAttribute('action', '');
 
     const popUpContainerFormNameInput = document.createElement('input');
     popUpContainerFormNameInput.setAttribute('type', 'text');
     popUpContainerFormNameInput.setAttribute('placeholder', 'Name');
-    popUpContainerFormForm.appendChild(popUpContainerFormNameInput);
+    popUpContainerFormElement.appendChild(popUpContainerFormNameInput);
 
     const popUpContainerFormTextArea = document.createElement('textarea');
     popUpContainerFormTextArea.setAttribute('name', '');
@@ -105,14 +109,14 @@ class PopUp {
     popUpContainerFormTextArea.setAttribute('cols', '30');
     popUpContainerFormTextArea.setAttribute('rows', '10');
     popUpContainerFormTextArea.setAttribute('placeholder', 'Your insights');
-    popUpContainerFormForm.appendChild(popUpContainerFormTextArea);
+    popUpContainerFormElement.appendChild(popUpContainerFormTextArea);
 
     const popUpContainerFormBtn = document.createElement('button');
     popUpContainerFormBtn.classList.add('pop-up__btn');
     popUpContainerFormBtn.textContent = 'Submit';
 
-    popUpContainerFormForm.appendChild(popUpContainerFormBtn);
-    popUpContainerForm.appendChild(popUpContainerFormForm);
+    popUpContainerFormElement.appendChild(popUpContainerFormBtn);
+    popUpContainerForm.appendChild(popUpContainerFormElement);
     popUpContent.appendChild(popUpContainerForm);
     popUp.appendChild(popUpContent);
     this.popupContainer.appendChild(popUp);
@@ -129,7 +133,7 @@ class PopUp {
       const username = popUpContainerFormNameInput.value;
       const comment = popUpContainerFormTextArea.value;
       if (username && comment) {
-        const currentDate = new Date().toLocaleDateString('en-GB');
+        const currentDate = new Date().toLocaleDateString('en-US');
 
         const involvement = new Involvement();
         await involvement.addComment(country, currentDate, username, comment);
@@ -140,6 +144,18 @@ class PopUp {
         const listItem = document.createElement('li');
         listItem.innerHTML = `<span class="bold-text">${currentDate} ${username}:</span> ${comment}`;
         popUpContainerComments.appendChild(listItem);
+
+        const commentsCount = await this.countComments(country);
+        popUpContainerLogTitle.textContent = `Comments (${commentsCount})`;
+
+        const commentsBtns = document.querySelectorAll(
+            '.wrapper__card__comments-btn',
+            );
+            commentsBtns.forEach((commentsBtn, index) => {
+                commentsBtn.addEventListener('click', () => {
+                    this.createPopUp(countries[index]);
+                });
+            });
       }
     });
 
