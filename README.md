@@ -29,7 +29,7 @@
 
 # 📖 [Most Visitied Countries] <a name="about-project"></a>
 
-**[Most Visitied Countries]** is a project that uses the API for its data resource.
+**[Most Visitied Countries]** is a web application that provides information about different countries. It allows users to explore details such as the continent, capital, area, and population of various countries. Users can also view comments and add their own insights about specific countries. The application utilizes the Involvement API to enable features like liking countries and commenting. It offers a user-friendly interface with pop-up windows to display country information and interact with the community through comments. The project aims to provide an engaging platform for users to learn and share knowledge about different countries.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -258,7 +258,7 @@ If you like this project, kindly drop a start for the [repository](https://githu
 
 **I would like to thank the following individuals and organizations for their contribution to this project.**
 
-- 🙏 [**Microvere**](https://www.microverse.org/?grsf=mohammad-a-nbtazu) for its arrangement and supports to all Micronauts and me.
+- 🙏We would like to express my heartfelt gratitude to [**Microvere**](https://www.microverse.org/?grsf=mohammad-a-nbtazu) for the invaluable learning experience they have provided. The supportive community, dedicated mentors, and remote collaboration opportunities have enhanced my technical skills and prepared me for real-world projects. I extend my appreciation to the mentors and staff members for their guidance and support. The friendships and knowledge sharing within the Microverse community have made this journey truly rewarding.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
