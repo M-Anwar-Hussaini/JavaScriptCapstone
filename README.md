@@ -231,6 +231,7 @@ npx eslint .
 - [ ] **[Release Version]**
 - [ ] **[Host to a server]**
 - [ ] **[Use bootstrap framework]**
+- [ ] **[Use developer local storage]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
