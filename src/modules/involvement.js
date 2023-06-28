@@ -24,6 +24,9 @@ class Involvement {
   getLikeAmount = async (country) => {
     const all = await this.getAllLikeInfo();
     let result = await all.find((obj) => obj.item_id === country);
+    if (!result) {
+      return 0;
+    }
     result = parseInt(result.likes, 10);
     return result || 0;
   };

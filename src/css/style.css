@@ -40,13 +40,13 @@ nav {
   margin: auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  gap: 3.2rem;
   align-items: center;
   padding: 2rem 1rem;
 }
 
 nav ul {
-  width: 100%;
+  gap: 1.6rem;
   margin-left: 2vw;
   display: flex;
   flex-direction: row;
