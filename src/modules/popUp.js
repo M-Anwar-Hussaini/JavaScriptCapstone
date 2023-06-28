@@ -149,13 +149,13 @@ class PopUp {
         popUpContainerLogTitle.textContent = `Comments (${commentsCount})`;
 
         const commentsBtns = document.querySelectorAll(
-            '.wrapper__card__comments-btn',
-            );
-            commentsBtns.forEach((commentsBtn, index) => {
-                commentsBtn.addEventListener('click', () => {
-                    this.createPopUp(countries[index]);
-                });
-            });
+          '.wrapper__card__comments-btn',
+        );
+        commentsBtns.forEach((commentsBtn, index) => {
+          commentsBtn.addEventListener('click', () => {
+            this.createPopUp((this.countries)[index]);
+          });
+        });
       }
     });
 
