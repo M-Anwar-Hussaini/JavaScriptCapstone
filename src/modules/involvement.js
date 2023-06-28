@@ -59,11 +59,9 @@ class Involvement {
 
     if (Array.isArray(data)) {
       return data;
-    } else {
-      return [];
     }
+    return [];
   };
 }
-
 
 export default Involvement;

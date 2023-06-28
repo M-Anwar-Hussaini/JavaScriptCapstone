@@ -69,7 +69,7 @@ class PopUp {
     const popUpContainerComments = document.createElement('ul');
     popUpContainerComments.classList.add('pop-up__container__log__entries');
 
-    let logEntries = await new Involvement().getComment(country);
+    const logEntries = await new Involvement().getComment(country);
 
     if (logEntries) {
       logEntries.forEach((entry) => {
