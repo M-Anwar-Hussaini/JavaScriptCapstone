@@ -34,12 +34,13 @@ class Involvement {
     return [...data];
   };
 
-  addComment = async (country, username, comment) => {
+  addComment = async (country, currentDate, username, comment) => {
     try {
       await fetch(`${this.baseURL}comments`, {
         method: 'POST',
         body: JSON.stringify({
           item_id: country,
+          date: currentDate,
           username,
           comment,
         }),
@@ -55,7 +56,11 @@ class Involvement {
   getComment = async (country) => {
     const res = await fetch(`${this.baseURL}comments?item_id=${country}`);
     const data = await res.json();
-    return [...data];
+
+    if (Array.isArray(data)) {
+      return data;
+    }
+    return [];
   };
 }
 
