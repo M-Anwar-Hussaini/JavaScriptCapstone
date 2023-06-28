@@ -8,64 +8,125 @@ class PopUp {
     this.commentsBtn = document.querySelector('.pop-up__comments-btn');
   }
 
-    createPopUp = async (country) => {
-      const countryInfo = this.countries.getCountryShortInfo(country);
-      const popUp = document.createElement('div');
-      popUp.classList.add('pop-up--active');
-      popUp.innerHTML = `
-    <div class="pop-up__container">
-        <img class="pop-up__container__img" src="${(await countryInfo).flagURl}" alt="${country.name}" />
-        <div class="pop-up__container__close-btn">
-            <i class="bi bi-x-circle"></i>
-        </div>
-        <div class="pop-up__container__content">
-            <h3 class="pop-up__container__content__title">${(await countryInfo).name}</h3>
-            <ul class="pop-up__container__content__details">
-                <li><span class="bold-text">Continent: </span><span class="span__br"><br></span>${(await countryInfo).continent}</li>
-                <li><span class="bold-text">Capital: </span><span class="span__br"><br></span>${(await countryInfo).capital}</li>
-                <li><span class="bold-text">Area: </span><span class="span__br"><br></span>${(await countryInfo).area} km2</li>
-             <li><span class="bold-text">Population: </span><span class="span__br"><br></span>${(await countryInfo).population}</li>
-            </ul>
-        </div>
+  createPopUp = async (country) => {
+    const countryInfo = this.countries.getCountryShortInfo(country);
+    const popUp = document.createElement('div');
+    popUp.classList.add('pop-up--active');
 
-        <div class="pop-up__container__log">
-            <h3 class="pop-up__container__log__title">Comments</h3>
-            <ul class="pop-up__container__log__entries">
-                <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
-                <li><span class="bold-text">25/06/2023 Tania:</span> This dish is very delicious!</li>
-                <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
-                <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
-            </ul>
-        </div>
+    const popUpContent = document.createElement('div');
+    popUpContent.classList.add('pop-up__container');
 
-        <div class="pop-up__container__form">
-            <h3 class="pop-up__container__form__title">Add a comment</h3>
-            <form action="">
-                <input type="text" placeholder="Name" />
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your insights"></textarea>
-                <button class="pop-up__btn">Submit</button>
-            </form>
-        </div>
-    </div>
-  `;
-      const closeBtn = popUp.querySelector('.pop-up__container__close-btn');
+    const popUpImg = document.createElement('img');
+    popUpImg.classList.add('pop-up__container__img');
+    popUpImg.setAttribute('src', (await countryInfo).flagURl);
+    popUpImg.setAttribute('alt', country.name);
+    popUpContent.appendChild(popUpImg);
 
-      closeBtn.addEventListener('click', () => {
-        popUp.classList.add('hidden');
+    const popUpCloseBtn = document.createElement('div');
+    popUpCloseBtn.classList.add('pop-up__container__close-btn');
+    popUpCloseBtn.innerHTML = '<i class="bi bi-x-circle"></i>';
+    popUpContent.appendChild(popUpCloseBtn);
+
+    const popUpContentContainer = document.createElement('div');
+    popUpContentContainer.classList.add('pop-up__container__content');
+
+    const popUpContentTitle = document.createElement('h3');
+    popUpContentTitle.classList.add('pop-up__container__content__title');
+    popUpContentTitle.textContent = (await countryInfo).name;
+    popUpContentContainer.appendChild(popUpContentTitle);
+
+    const popUpContentDetails = document.createElement('ul');
+    popUpContentDetails.classList.add('pop-up__container__content__details');
+
+    const details = [
+      { label: 'Continent', value: (await countryInfo).continent },
+      { label: 'Capital', value: (await countryInfo).capital },
+      { label: 'Area', value: `${(await countryInfo).area} km2` },
+      { label: 'Population', value: (await countryInfo).population },
+    ];
+
+    details.forEach(detail => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `<span class="bold-text">${detail.label}: </span><span class="span__br"><br></span>${detail.value}`;
+      popUpContentDetails.appendChild(listItem);
+    });
+
+    popUpContentContainer.appendChild(popUpContentDetails);
+    popUpContent.appendChild(popUpContentContainer);
+
+    const popUpContainerLog = document.createElement('div');
+    popUpContainerLog.classList.add('pop-up__container__log');
+
+    const popUpContainerLogTitle = document.createElement('h3');
+    popUpContainerLogTitle.classList.add('pop-up__container__log__title');
+    popUpContainerLogTitle.textContent = 'Comments';
+    popUpContainerLog.appendChild(popUpContainerLogTitle);
+
+    const popUpContainerLogEntries = document.createElement('ul');
+    popUpContainerLogEntries.classList.add('pop-up__container__log__entries');
+    popUpContainerLogEntries.innerHTML = `
+      <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
+      <li><span class="bold-text">25/06/2023 Tania:</span> This dish is very delicious!</li>
+      <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
+      <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
+      `;
+    popUpContainerLog.appendChild(popUpContainerLogEntries);
+    popUpContent.appendChild(popUpContainerLog);
+
+    const popUpContainerForm = document.createElement('div');
+    popUpContainerForm.classList.add('pop-up__container__form');
+
+    const popUpContainerFormTitle = document.createElement('h3');
+    popUpContainerFormTitle.classList.add('pop-up__container__form__title');
+    popUpContainerFormTitle.textContent = 'Add a comment';
+    popUpContainerForm.appendChild(popUpContainerFormTitle);
+
+    const popUpContainerFormForm = document.createElement('form');
+    popUpContainerFormForm.setAttribute('action', '');
+
+    const popUpContainerFormNameInput = document.createElement('input');
+    popUpContainerFormNameInput.setAttribute('type', 'text');
+    popUpContainerFormNameInput.setAttribute('placeholder', 'Name');
+    popUpContainerFormForm.appendChild(popUpContainerFormNameInput);
+
+    const popUpContainerFormTextArea = document.createElement('textarea');
+    popUpContainerFormTextArea.setAttribute('name', '');
+    popUpContainerFormTextArea.setAttribute('id', '');
+    popUpContainerFormTextArea.setAttribute('cols', '30');
+    popUpContainerFormTextArea.setAttribute('rows', '10');
+    popUpContainerFormTextArea.setAttribute('placeholder', 'Your insights');
+    popUpContainerFormForm.appendChild(popUpContainerFormTextArea);
+
+    const popUpContainerFormBtn = document.createElement('button');
+    popUpContainerFormBtn.classList.add('pop-up__btn');
+    popUpContainerFormBtn.textContent = 'Submit';
+
+    popUpContainerFormForm.appendChild(popUpContainerFormBtn);
+    popUpContainerForm.appendChild(popUpContainerFormForm);
+    popUpContent.appendChild(popUpContainerForm);
+    popUp.appendChild(popUpContent);
+    this.popupContainer.appendChild(popUp);
+
+    const closeBtn = popUp.querySelector('.pop-up__container__close-btn');
+
+    closeBtn.addEventListener('click', () => {
+      popUp.classList.add('hidden');
+    });
+
+    this.popupContainer.appendChild(popUp);
+  };
+
+  displayPopUp = async () => {
+    const countries = this.countries.getSelectedCountries();
+    const commentsBtns = document.querySelectorAll(
+      '.wrapper__card__comments-btn',
+    );
+    commentsBtns.forEach((commentsBtn, index) => {
+      commentsBtn.addEventListener('click', () => {
+        this.createPopUp(countries[index]);
       });
-
-      this.popupContainer.appendChild(popUp);
-    };
-
-    displayPopUp = async () => {
-      const countries = this.countries.getSelectedCountries();
-      const commentsBtns = document.querySelectorAll('.wrapper__card__comments-btn');
-      commentsBtns.forEach((commentsBtn, index) => {
-        commentsBtn.addEventListener('click', () => {
-          this.createPopUp(countries[index]);
-        });
-      });
-    }
+    });
+  };
 }
 
 export default PopUp;
