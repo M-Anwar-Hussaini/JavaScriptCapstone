@@ -1,4 +1,5 @@
 import Countries from './rest_countries.js';
+import Involvement from './involvement.js';
 
 class PopUp {
   constructor() {
@@ -45,7 +46,7 @@ class PopUp {
       { label: 'Population', value: (await countryInfo).population },
     ];
 
-    details.forEach(detail => {
+    details.forEach((detail) => {
       const listItem = document.createElement('li');
       listItem.innerHTML = `<span class="bold-text">${detail.label}: </span><span class="span__br"><br></span>${detail.value}`;
       popUpContentDetails.appendChild(listItem);
@@ -64,12 +65,21 @@ class PopUp {
 
     const popUpContainerLogEntries = document.createElement('ul');
     popUpContainerLogEntries.classList.add('pop-up__container__log__entries');
-    popUpContainerLogEntries.innerHTML = `
-      <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
-      <li><span class="bold-text">25/06/2023 Tania:</span> This dish is very delicious!</li>
-      <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
-      <li><span class="bold-text">24/06/2023 Alex:</span> I love that salad!</li>
-      `;
+
+    const popUpContainerComments = document.createElement('ul');
+    popUpContainerComments.classList.add('pop-up__container__log__entries');
+
+    let logEntries = await new Involvement().getComment(country);
+
+    if (logEntries) {
+      logEntries.forEach((entry) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<span class="bold-text">${entry.creation_date} ${entry.username}:</span> ${entry.comment}`;
+        popUpContainerComments.appendChild(listItem);
+      });
+    }
+
+    popUpContainerLogEntries.appendChild(popUpContainerComments);
     popUpContainerLog.appendChild(popUpContainerLogEntries);
     popUpContent.appendChild(popUpContainerLog);
 
@@ -111,6 +121,26 @@ class PopUp {
 
     closeBtn.addEventListener('click', () => {
       popUp.classList.add('hidden');
+    });
+
+    popUpContainerFormBtn.addEventListener('click', async (event) => {
+      event.preventDefault();
+
+      const username = popUpContainerFormNameInput.value;
+      const comment = popUpContainerFormTextArea.value;
+      if (username && comment) {
+        const currentDate = new Date().toLocaleDateString('en-GB');
+
+        const involvement = new Involvement();
+        await involvement.addComment(country, currentDate, username, comment);
+
+        popUpContainerFormNameInput.value = '';
+        popUpContainerFormTextArea.value = '';
+
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<span class="bold-text">${currentDate} ${username}:</span> ${comment}`;
+        popUpContainerComments.appendChild(listItem);
+      }
     });
 
     this.popupContainer.appendChild(popUp);
