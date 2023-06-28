@@ -30,9 +30,10 @@ class DOM {
 
   displayAllCountries = async () => {
     this.container.innerHTML = '';
-    const contries = this.countries.getSelectedCountries();
-    contries.forEach(async (country) => {
-      const html = await this.createHtmlContent(country);
+    const countries = this.countries.getSelectedCountries();
+    const promises = countries.map((country) => this.createHtmlContent(country));
+    const htmlContents = await Promise.all(promises);
+    htmlContents.forEach((html) => {
       this.container.insertAdjacentHTML('beforeend', html);
     });
   };
