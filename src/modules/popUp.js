@@ -153,7 +153,7 @@ class PopUp {
         );
         commentsBtns.forEach((commentsBtn, index) => {
           commentsBtn.addEventListener('click', () => {
-            this.createPopUp((this.countries)[index]);
+            this.createPopUp(this.countries[index]);
           });
         });
       }
@@ -172,6 +172,41 @@ class PopUp {
         this.createPopUp(countries[index]);
       });
     });
+  };
+
+  static getComments = (country) => {
+    const selectedCountries = [
+      'turkey',
+      'russia',
+      'canada',
+      'iran',
+      'egypt',
+      'colombia',
+      'afghanistan',
+      'japan',
+      'china',
+      'india',
+      'iraq',
+      'nigeria',
+      'france',
+      'italy',
+      'spain',
+      'thailand',
+      'australia',
+      'brazil',
+      'argentina',
+      'pakistan',
+      'mexico',
+      'venezuela',
+      'UK',
+      'germany',
+    ];
+    for (let i = 0; i < 24; i += 1) {
+      if (selectedCountries[i] === country) {
+        return i + 1;
+      }
+    }
+    return 0;
   };
 }
 
