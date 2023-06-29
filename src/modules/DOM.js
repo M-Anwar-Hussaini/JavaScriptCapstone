@@ -8,6 +8,7 @@ class DOM {
     this.container = document.querySelector('.wrapper');
     this.involvement = new Involvement();
     this.popUp = new PopUp();
+    this.allLikes = 0;
   }
 
   createCardEl = async (country) => {
@@ -40,6 +41,7 @@ class DOM {
     btnLike.innerHTML = '<i class="bi bi-heart-fill"></i>';
 
     const likeAmount = _.createElement('p');
+    likeAmount.className = 'like__amounts';
     likeAmount.innerText = `${likes} like(s)`;
 
     const btnComments = _.createElement('button');
@@ -66,7 +68,7 @@ class DOM {
     btnComments.addEventListener('click', () => {
       this.popUp.createPopUp(name);
     });
-
+    this.allLikes += likes;
     return article;
   };
 
@@ -78,6 +80,8 @@ class DOM {
       this.container.appendChild(el);
     });
   };
+
+  static getLikes = () => 23;
 }
 
 export default DOM;
