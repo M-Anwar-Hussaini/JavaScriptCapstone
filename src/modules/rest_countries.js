@@ -37,6 +37,7 @@ class Countries {
   getCountryShortInfo = async (country) => {
     const data = await this.getCountryFullData(country);
     return {
+      country,
       name: data.name.common,
       flagURl: data.flags.png,
       population: data.population,
