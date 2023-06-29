@@ -1,6 +1,7 @@
 import Countries from './rest_countries.js';
 import Involvement from './involvement.js';
 import PopUp from './popUp.js';
+import Storage from './local_storage.js';
 
 class DOM {
   constructor() {
@@ -9,9 +10,11 @@ class DOM {
     this.involvement = new Involvement();
     this.popUp = new PopUp();
     this.allLikes = 0;
+    this.storage = new Storage();
   }
 
   createCardEl = async (country) => {
+    let isLiked = this.storage.isLiked(country);
     const countryInfo = await this.countries.getCountryShortInfo(country);
     const { name, flagURl } = countryInfo;
     let likes = await this.involvement.getLikeAmount(name);
@@ -40,6 +43,10 @@ class DOM {
     btnLike.className = 'wrapper__card__details__likes-btn';
     btnLike.innerHTML = '<i class="bi bi-heart-fill"></i>';
 
+    if (isLiked) {
+      btnLike.style.color = 'red';
+    }
+
     const likeAmount = _.createElement('p');
     likeAmount.className = 'like__amounts';
     likeAmount.innerText = `${likes} like(s)`;
@@ -60,9 +67,14 @@ class DOM {
 
     // ActionListeners
     btnLike.addEventListener('click', async () => {
-      likes += 1;
-      likeAmount.innerText = `${likes} like(s)`;
-      await this.involvement.addLike(name);
+      if (!isLiked) {
+        likes += 1;
+        likeAmount.innerText = `${likes} like(s)`;
+        this.storage.likeCountry(country);
+        btnLike.style.color = 'red';
+        isLiked = !isLiked;
+        await this.involvement.addLike(name);
+      }
     });
 
     btnComments.addEventListener('click', () => {
