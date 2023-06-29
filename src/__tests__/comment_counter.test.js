@@ -14,4 +14,11 @@ describe('countComments', () => {
     const result = PopUp.getComments(country);
     expect(result).toBe(expected);
   });
+
+  test('The number of comments for colombia should be 24', async () => {
+    const country = 'germany';
+    const expected = 6;
+    const result = PopUp.getComments(country);
+    expect(result).not.toBe(expected);
+  });
 });
