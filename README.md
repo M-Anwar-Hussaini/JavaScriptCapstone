@@ -89,7 +89,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- ✅ [click](https://m-anwar-hussaini.github.io/JavaScriptCapstone/) to see live demo.
+- ✅ [Click](https://m-anwar-hussaini.github.io/JavaScriptCapstone/) to see live demo and watch this [video](https://drive.google.com/file/d/1Gjnf-vcZmFESFgXIL3QvS6qss1ailWN7/view?usp=sharing) for project short descriptions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
