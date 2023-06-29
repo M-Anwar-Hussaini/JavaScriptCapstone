@@ -5,7 +5,5 @@ import PopUp from './modules/popUp.js';
 const dom = new DOM();
 const popUp = new PopUp();
 
-dom.displayAllCountries()
-  .then(() => {
-    popUp.displayPopUp();
-  });
+dom.displayAllCountries();
+popUp.displayPopUp();
